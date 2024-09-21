@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Web Page with Toggle Menu and Background Animation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             box-sizing: border-box;
@@ -167,11 +168,11 @@
                 display: flex;
             }
 
-            nav ul li {
+            nav ul  {
                 margin: 10px 0;
             }
 
-            nav ul li a {
+            nav ul a {
                 padding: 15px;
                 font-size: 18px;
             }
@@ -265,36 +266,45 @@
 }
 
 #nav-list li a {
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
     display: block;
+    
+   
 }
 
-#nav-list li a:hover {
-    background-color: #575757;
-}
+
+
 
 /* Dropdown styling */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #6f004e;
+
     min-width: 140px;
+font-size: 20px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+     
 }
+
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
-    margin: 7px;
+    padding: 12px;
     text-decoration: none;
+            background-color: #f09433;
+            box-shadow: 0px 5px 3px rgb(13, 13, 13);
+            color: #f4f4f4;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 7px;
+            text-align: center;
+            font-size: 15px;
+            
     display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #bc1888;
 }
 
 /* Hover functionality */
@@ -308,18 +318,53 @@
     position: absolute;
     left: 140px; /* adjust based on width of the first dropdown */
     top: 0;
-    margin-left: 12px;
-    margin: 2px;
-     background-color: #f09433;
+    margin: 7px;
+    overflow: hidden;
+    margin-left: 2px;
+    text-align: center;
+    font-size: 15px;
+}
+.dropdown1 a{
     
-    color: #bc1888;
+            background: linear-gradient(yellow,red);
+            box-shadow: 0px 5px 3px rgb(13, 13, 13);
+            color: black;
+            font: bold;
+            margin: 7px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        
+           
+
+}
+.dropdown1 a:hover{
+background: linear-gradient(cyan,pink);
 }
 
 .dropdown-content .dropdown-content:hover .dropdown1 {
     display: block;
+    position: absolute;
 }
  
+#dropbtn {
+            margin: 8px;
+            background-color: grey;
+            box-shadow: 0px 5px 3px rgb(13, 13, 13);
+            color: #f4f4f4;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+           
 
+}
+#dropbtn:hover{
+    text-decoration: underline;
+    background-color: red;
+            }
+   
     </style>
 </head>
 <body>
@@ -334,14 +379,14 @@
             </div>
             <ul id="nav-list">
                 <li class="dropdown">
-                    <a href="#home" class="dropbtn">Home</a>
+                    <a href="#home" id="dropbtn">Home</a>
                     <div class="dropdown-content">
                         <a href="#home-section1">Home Section 1</a>
                         <a href="#home-section2">Home Section 2</a>
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#Services" class="dropbtn">Services</a>
+                    <a href="#Services" id="dropbtn">Services</a>
                     <div class="dropdown-content">
                         <a href="#web-development">Web Development</a>
                         <a href="#seo">SEO</a>
@@ -349,7 +394,7 @@
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#contact" class="dropbtn">Contact</a>
+                    <a href="#contact" id="dropbtn">Contact</a>
                     <div class="dropdown-content">
                         <a href="#">Contact1</a>
                         <a href="#">Contact2</a>
@@ -357,20 +402,24 @@
                         <div class="dropdown-content">
                             <a href="#exam">Exam<i class="fas fa-caret-down"></i></a>
                             <div class="dropdown1">
-                                <a href="#">Contact11</a>
+                                <a href="friends.html">friends</a>
                                 <a href="#">Contact22</a>
                                 <a href="#">Contact33</a>
                                 <a href="#">Contact44</a>
-                            </div>
-                           
+                               
+                            
                         </div>
-                        <a href="#">Contact44</a>
-                        <a href="#">Contact44</a>
-                        <a href="#">Contact44</a>
+                        
+                            <a href="#">Contact44</a>
+                            <a href="#">Contact44</a>
+                            <a href="#">Contact44</a>
+                      
                     </div>
-                </li>
+                    </li>
+                    
+                
                 <li class="dropdown">
-                    <a href="#home" class="dropbtn">QR Code</a>
+                    <a href="#home" id="dropbtn">QR Code</a>
                     <div class="dropdown-content">
                         <a href="#home-section1">Home Section 1</a>
                         <a href="#home-section2">Home Section 2</a>
@@ -378,7 +427,7 @@
                 </li>
                 
                 <li class="dropdown">
-                    <a href="Images.html" class="dropbtn">Images</a>
+                    <a href="Images.html" id="dropbtn">Images</a>
                     <div class="dropdown-content">
                         <a href="#home-section1">Home Section 1</a>
                         <a href="#home-section2">Home Section 2</a>
@@ -387,7 +436,7 @@
                 
                     
                 <li class="dropdown">
-                    <a href="friends.html" class="dropbtn">Friends</a>
+                    <a href="#" id="dropbtn">Friends</a>
                     <div class="dropdown-content">
                         <a href="#home-section1">Home Section 1</a>
                         <a href="#home-section2">Home Section 2</a>
@@ -398,7 +447,7 @@
                     
                     <div class="dropdown-content">
                         
-            <a href="https://onlinegrowmoney369.blogspot.com/2023/10/the-ultimate-guide-to-making-money.html">Blog</a>
+            <a href="#,,https://onlinegrowmoney369.blogspot.com/2023/10/the-ultimate-guide-to-making-money.html">Blog</a>
                         <a href="#home-section1">Home Section 1</a>
                         <a href="#home-section2">Home Section 2</a>
                     </div>

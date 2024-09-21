@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page with Toggle Menu and Background Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: radial-gradient(pink, rgb(253, 251, 251));
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            
+        }
+
+        header img.logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 80px; /* Adjust size */
+            height: auto;
+        }
+
+        .animated-heading,h1 {
+            margin: 10px;
+            position: relative;
+            font-size: 50px;
+            text-shadow: 4px 9px 5px rgba(141, 133, 133, 0.88);
+            background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;  
+            animation: rainbow-animation 80s linear infinite;
+
+        }
+
+        @keyframes rainbow-animation {
+            to {
+                background-position: 4800vh;
+            }
+        }
+
+        nav {
+            position: relative;
+    
+    
+    padding: 8px;
+}
+        
+
+        nav ul {
+            list-style-type: none;
+            text-align: right;
+            padding-right: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            background-color: grey;
+            box-shadow: 0px 5px 3px rgb(13, 13, 13);
+            color: #f4f4f4;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            background-color: red;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: image 15s infinite ease-in-out;
+        }
+
+        @keyframes image {
+            0% { background-image: url("A cartoon chase sce (7).jpg"); }
+            10% { background-image: url("A cartoon chase sce (1).jpg"); }
+            20% { background-image: url("A cartoon chase sce (2).jpg"); }
+            30% { background-image: url("A cartoon chase sce (3).jpg"); }
+            40% { background-image: url("A cartoon chase sce (4).jpg"); }
+            50% { background-image: url("A cartoon chase sce (5).jpg"); }
+            60% { background-image: url("A cartoon chase sce (6).jpg"); }
+            70% { background-image: url("A cartoon chase sce (7).jpg"); }
+            80% { background-image: url("A cartoon chase sce (8).jpg"); }
+            90% { background-image: url("A cartoon chase sce (9).jpg"); }
+            100% { background-image: url("A cartoon chase sce (10).jpg"); }
+        }
+
+        footer {
+            background: linear-gradient(black,rgb(92, 89, 89));
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+        }
+
+        footer ul li {
+            margin-left: 15px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        footer ul li a:hover {
+            color: #ddd;
+        }
+
+        .social-media li a i {
+            font-size: 24px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                padding-right: 0;
+                background-color: rgba(0, 0, 0, 0.8);
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                padding: 15px;
+                font-size: 18px;
+            }
+
+            footer .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer ul {
+                justify-content: center;
+            }
+
+            footer ul li {
+                margin: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            main section h2 {
+                font-size: 20px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+
+        /* Additional Styles for Social Media Icons */
+        .social-media {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-media li {
+            margin: 0 10px;
+        }
+
+        .social-media li a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-media li a:hover {
+            color: #f0f0f0;
+            transform: scale(1.2);
+        }
+
+        .social-media li a .fab {
+            font-size: 24px;
+        }
+
+        /* Specific colors for each social media icon */
+        .social-media li a[href*="facebook.com"] {
+            color: #159dbc;
+        }
+
+        .social-media li a[href*="twitter.com"] {
+            color: #0f4dd4;
+        }
+
+        .social-media li a[href*="linkedin.com"] {
+            color: #0077b5;
+        }
+
+        .social-media li a[href*="instagram.com"] {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Dropdown content (hidden by default) */
+/* Basic styling */
+
+
+#nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-list li {
+    display: inline-block;
+    position: relative;
+}
+
+#nav-list li a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+#nav-list li a:hover {
+    background-color: #575757;
+}
+
+/* Dropdown styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    margin: 7px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Hover functionality */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Second-level dropdown */
+.dropdown1 {
+    display: none;
+    position: absolute;
+    left: 150px; /* adjust based on width of the first dropdown */
+    top: 0;
+    margin-left: 14px;
+    margin: 0px;
+}
+
+.dropdown-content .dropdown-content:hover .dropdown1 {
+    display: block;
+}
+.dropbtn{
+    
+}
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo added here 
+        <img src="your-logo.png" alt="Logo" class="logo">  Replace with actual logo image path -->
+        <h1 class="animated-heading">PRADUM KUMAR</h1>
+        
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776; <!-- Menu icon (hamburger) -->
+            </div>
+            <ul id="nav-list">
+                <li class="dropdown">
+                    <a href="#home" class="dropbtn">Home</a>
+                    <div class="dropdown-content">
+                        <a href="#home-section1">Home Section 1</a>
+                        <a href="#home-section2">Home Section 2</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#Services" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="#web-development">Web Development</a>
+                        <a href="#seo">SEO</a>
+                        <a href="#marketing">Marketing</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#contact" class="dropbtn">Contact</a>
+                    <div class="dropdown-content">
+                        <a href="#">Contact1</a>
+                        <a href="#">Contact2</a>
+                        <a href="#">Contact3</a>
+                        <div class="dropdown-content">
+                            <a href="#exam">Exam<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown1">
+                                <a href="#">Contact11</a>
+                                <a href="#">Contact22</a>
+                                <a href="#">Contact33</a>
+                                <a href="#">Contact44</a>
+                            </div>
+                           
+                        </div>
+                        <a href="#">Contact44</a>
+                        <a href="#">Contact44</a>
+                        <a href="#">Contact44</a>
+                    </div>
+                </li>
+                <li><a href="QR Code.html"class ="dropbtn">QR Code</a></li>
+                <li><a href="Images.html"class ="dropbtn">Images</a></li>
+                <li><a href="friends.html"class ="dropbtn">Friends</a></li>
+                <li><a href="https://onlinegrowmoney369.blogspot.com/2023/10/the-ultimate-guide-to-making-money.html">Blog</a></li>
+            </ul>
+        </nav>
+                   
+    </header>
+</ul>
+</nav>
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <p>Hello! I am Pradum Kumar & I have done my Graduation B.C.A.</p>
+            <summary>
+                <details>
+                    <h3>Language: HTML CSS JAVASCRIPT PHP with LARAVEL and JAVA.</h3>
+                    <p>I am a website creator Fullstack Developer. For more details, visit the services section of the page.</p>
+                    <p>This is the contact section of the page.</p>
+                </details>
+            </summary>
+        </section> 
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>&copy; Design By Pradum Kumar.</h3>
+            <ul class="social-media">
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            // Toggle between hamburger and cancel icon
+            if (navList.classList.contains('active')) {
+                menuToggle.innerHTML = '&times;'; // Close icon
+            } else {
+                menuToggle.innerHTML = '&#9776;'; // Hamburger icon
+            }
+        });
+    </script>
+</body>
+</html>

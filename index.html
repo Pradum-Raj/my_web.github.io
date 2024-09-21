@@ -64,33 +64,12 @@
 }
         
 
-        nav ul {
+        nav  {
             list-style-type: none;
             text-align: right;
             padding-right: 20px;
             display: flex;
             justify-content: flex-end;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            background-color: grey;
-            box-shadow: 0px 5px 3px rgb(13, 13, 13);
-            color: #f4f4f4;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 20px;
-            padding: 10px;
-            display: block;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-            background-color: red;
         }
 
         .menu-toggle {
@@ -196,7 +175,7 @@
                 padding: 15px;
                 font-size: 18px;
             }
-
+        }
             footer .footer-content {
                 flex-direction: column;
                 text-align: center;
@@ -209,7 +188,7 @@
             footer ul li {
                 margin: 5px;
             }
-        }
+        
 
         @media (max-width: 480px) {
             header h1 {
@@ -220,9 +199,7 @@
                 font-size: 20px;
             }
 
-            nav ul li a {
-                font-size: 16px;
-            }
+            
         }
 
         /* Additional Styles for Social Media Icons */
@@ -302,7 +279,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #6f004e;
     min-width: 140px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -329,18 +306,20 @@
 .dropdown1 {
     display: none;
     position: absolute;
-    left: 150px; /* adjust based on width of the first dropdown */
+    left: 140px; /* adjust based on width of the first dropdown */
     top: 0;
-    margin-left: 14px;
-    margin: 0px;
+    margin-left: 12px;
+    margin: 2px;
+     background-color: #f09433;
+    
+    color: #bc1888;
 }
 
 .dropdown-content .dropdown-content:hover .dropdown1 {
     display: block;
 }
-.dropbtn{
-    
-}
+ 
+
     </style>
 </head>
 <body>
@@ -390,10 +369,41 @@
                         <a href="#">Contact44</a>
                     </div>
                 </li>
-                <li><a href="QR Code.html"class ="dropbtn">QR Code</a></li>
-                <li><a href="Images.html"class ="dropbtn">Images</a></li>
-                <li><a href="friends.html"class ="dropbtn">Friends</a></li>
-                <li><a href="https://onlinegrowmoney369.blogspot.com/2023/10/the-ultimate-guide-to-making-money.html">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#home" class="dropbtn">QR Code</a>
+                    <div class="dropdown-content">
+                        <a href="#home-section1">Home Section 1</a>
+                        <a href="#home-section2">Home Section 2</a>
+                    </div>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="Images.html" class="dropbtn">Images</a>
+                    <div class="dropdown-content">
+                        <a href="#home-section1">Home Section 1</a>
+                        <a href="#home-section2">Home Section 2</a>
+                    </div>
+                </li>
+                
+                    
+                <li class="dropdown">
+                    <a href="friends.html" class="dropbtn">Friends</a>
+                    <div class="dropdown-content">
+                        <a href="#home-section1">Home Section 1</a>
+                        <a href="#home-section2">Home Section 2</a>
+                    </div>
+                </li>
+                        
+                <li class="dropdown">
+                    
+                    <div class="dropdown-content">
+                        
+            <a href="https://onlinegrowmoney369.blogspot.com/2023/10/the-ultimate-guide-to-making-money.html">Blog</a>
+                        <a href="#home-section1">Home Section 1</a>
+                        <a href="#home-section2">Home Section 2</a>
+                    </div>
+                </li>
+                
             </ul>
         </nav>
                    

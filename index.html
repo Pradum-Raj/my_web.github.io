@@ -278,33 +278,37 @@
 .dropdown-content {
     display: none;
     position: absolute;
-
+    font-size: 20px;
     min-width: 140px;
 font-size: 20px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
      
 }
 
 
 .dropdown-content a {
     color: black;
-    padding: 12px;
+    padding: 12px 16px;
+    margin: 10px;
     text-decoration: none;
-            background-color: #f09433;
+     margin: 8px;
+    
+            background: radial-gradient(#bc1888,yellow);
             box-shadow: 0px 5px 3px rgb(13, 13, 13);
-            color: #f4f4f4;
-            text-decoration: none;
+            color: black;
+            
+            text-align: center;
             border-radius: 10px;
             font-weight: bold;
-            margin: 7px;
-            text-align: center;
-            font-size: 15px;
-            
+           font-size: 15px;
+            padding: 10px;
     display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #bc1888;
+    text-decoration: underline;
+    background: radial-gradient(rgb(213, 210, 208),rgb(28, 73, 179));
 }
 
 /* Hover functionality */
@@ -318,30 +322,19 @@ font-size: 20px;
     position: absolute;
     left: 140px; /* adjust based on width of the first dropdown */
     top: 0;
-    margin: 7px;
+    
+}
+.dropdown1 a{
     overflow: hidden;
     margin-left: 2px;
     text-align: center;
-    font-size: 15px;
-}
-.dropdown1 a{
+    font-size: 15pxpx;
     
-            background: linear-gradient(yellow,red);
-            box-shadow: 0px 5px 3px rgb(13, 13, 13);
-            color: black;
-            font: bold;
-            margin: 7px;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-        
-           
-
+    
 }
 .dropdown1 a:hover{
-background: linear-gradient(cyan,pink);
+    background: linear-gradient(pink,cyan);
 }
-
 .dropdown-content .dropdown-content:hover .dropdown1 {
     display: block;
     position: absolute;

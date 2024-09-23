@@ -17,17 +17,20 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-        background: linear-gradient(black,rgb(92, 89, 89));
+            background-color: #f4f4f4;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
         header {
+            display: contents;
             background: radial-gradient(pink, rgb(253, 251, 251));
             text-align: center;
-            padding: 20px 0;
+            padding: 16px ;
             position: relative;
+            display: inline;
+        
             
         }
 
@@ -48,6 +51,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;  
             animation: rainbow-animation 80s linear infinite;
+            display: inline;
 
         }
 
@@ -79,27 +83,34 @@
             font-size: 24px;
             padding: 10px;
         }
-
+.container,main{
+    
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+    
+        
+        
+        
+}
         main {
             flex: 1;
-            padding: 20px;
-            background-size: cover;
-            background-repeat: no-repeat;
+        
             animation: image 15s infinite ease-in-out;
         }
 
         @keyframes image {
-            0% { background-image: url("A cartoon chase sce (7).jpg"); }
-            10% { background-image: url("A cartoon chase sce (1).jpg"); }
-            20% { background-image: url("A cartoon chase sce (2).jpg"); }
-            30% { background-image: url("A cartoon chase sce (3).jpg"); }
-            40% { background-image: url("A cartoon chase sce (4).jpg"); }
-            50% { background-image: url("A cartoon chase sce (5).jpg"); }
-            60% { background-image: url("A cartoon chase sce (6).jpg"); }
-            70% { background-image: url("A cartoon chase sce (7).jpg"); }
-            80% { background-image: url("A cartoon chase sce (8).jpg"); }
-            90% { background-image: url("A cartoon chase sce (9).jpg"); }
-            100% { background-image: url("A cartoon chase sce (10).jpg"); }
+            0% { background-image: url("nature image mountai (1).jpg"); }
+            10% { background-image: url("nature image mountai (2).jpg"); }
+            20% { background-image: url("nature image mountai (3).jpg"); }
+            30% { background-image: url("nature image mountai (4).jpg"); }
+            40% { background-image: url("nature image mountai (5).jpg"); }
+            50% { background-image: url("nature image mountai (6).jpg"); }
+            60% { background-image: url("nature image mountai (7).jpg"); }
+            70% { background-image: url("nature image mountai (8).jpg"); }
+            80% { background-image: url("nature image mountai (9).jpg"); }
+            90% { background-image: url("nature image mountai (10).jpg"); }
+            100% { background-image: url("nature image mountai (11).jpg"); }
         }
 
         footer {
@@ -107,6 +118,7 @@
             color: white;
             text-align: center;
             padding: 10px 0;
+             display: inline;
         }
 
         footer .footer-content {
@@ -114,6 +126,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
+           
             flex-wrap: wrap;
         }
 
@@ -194,6 +207,7 @@
         @media (max-width: 480px) {
             header h1 {
                 font-size: 24px;
+                position: relative;
             }
 
             main section h2 {
@@ -283,6 +297,7 @@
 font-size: 20px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    align-items: center;
      
 }
 
@@ -322,13 +337,16 @@ font-size: 20px;
     position: absolute;
     left: 140px; /* adjust based on width of the first dropdown */
     top: 0;
+    background-color: #e6683c;
+    border-radius: 5px;
+    align-items: center;
     
 }
 .dropdown1 a{
     overflow: hidden;
     margin-left: 2px;
     text-align: center;
-    font-size: 15pxpx;
+    font-size: 15px;
     
     
 }
@@ -373,21 +391,12 @@ font-size: 20px;
             <ul id="nav-list">
                 <li class="dropdown">
                     <a href="#home" id="dropbtn">Home</a>
-                    <div class="dropdown-content">
-                        <a href="#home-section1">Home Section 1</a>
-                        <a href="#home-section2">Home Section 2</a>
-                    </div>
                 </li>
+              
+                       
+              
                 <li class="dropdown">
-                    <a href="#Services" id="dropbtn">Services</a>
-                    <div class="dropdown-content">
-                        <a href="#web-development">Web Development</a>
-                        <a href="#seo">SEO</a>
-                        <a href="#marketing">Marketing</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#contact" id="dropbtn">Contact</a>
+                    <a href="#contact" id="dropbtn"> Free Product</a>
                     <div class="dropdown-content">
                         <a href="#">Contact1</a>
                         <a href="#">Contact2</a>
@@ -395,7 +404,7 @@ font-size: 20px;
                         <div class="dropdown-content">
                             <a href="#exam">Exam<i class="fas fa-caret-down"></i></a>
                             <div class="dropdown1">
-                                <a href="friends.html">friends</a>
+                                <a href="friends.html">Jobs</a>
                                 <a href="#">Contact22</a>
                                 <a href="#">Contact33</a>
                                 <a href="#">Contact44</a>
@@ -412,36 +421,36 @@ font-size: 20px;
                     
                 
                 <li class="dropdown">
-                    <a href="#home" id="dropbtn">QR Code</a>
+                    <a href="#home" id="dropbtn">Tools</a>
                     <div class="dropdown-content">
-                        <a href="#home-section1">Home Section 1</a>
-                        <a href="#home-section2">Home Section 2</a>
+                        <a href="#home-section1">ChatGPT</a>
+                        <a href="#home-section2">ZZZ</a>
+
                     </div>
                 </li>
-                
                 <li class="dropdown">
-                    <a href="Images.html" id="dropbtn">Images</a>
+                    <a href="#home" id="dropbtn">Exam</a>
                     <div class="dropdown-content">
-                        <a href="#home-section1">Home Section 1</a>
-                        <a href="#home-section2">Home Section 2</a>
+                        <a href="#home-section2">UPSC</a>
+                        <div class="dropdown-content">
+                            <a href="#Services" id="dropbtn">CGL</a>
+                            <div class="dropdown1">
+                                <a href="#web-development">Books</a>
+                                <a href="#seo">Notes</a>
+                                <a href="#marketing">strategy</a>
+                            </div>
+                        <a href="#home-section2">CHSL</a>
+                        <a href="#home-section2">MTS</a>
+                        <a href="#home-section2">PCS</a>
+                        <a href="#home-section2">NDA</a>
+                        <a href="#home-section2">CCC</a>
                     </div>
                 </li>
-                
-                    
                 <li class="dropdown">
-                    <a href="#" id="dropbtn">Friends</a>
+                    <a href="#Images.html" id="dropbtn">Blog</a>
                     <div class="dropdown-content">
-                        <a href="#home-section1">Home Section 1</a>
-                        <a href="#home-section2">Home Section 2</a>
-                    </div>
-                </li>
-                        
-                <li class="dropdown">
-                    
-                    <div class="dropdown-content">
-                        
-            <a href="#,,https://onlinegrowmoney369.blogspot.com/2023/10/the-ultimate-guide-to-making-money.html">Blog</a>
-                        <a href="#home-section1">Home Section 1</a>
+                        <a href="#">Blog</a>
+                        <a href="https://onlinegrowmoney369.blogspot.com/2023/10/the-ultimate-guide-to-making-money.html">make money</a>
                         <a href="#home-section2">Home Section 2</a>
                     </div>
                 </li>
@@ -453,6 +462,7 @@ font-size: 20px;
 </ul>
 </nav>
     <main>
+        <div class="container">
         <section id="about">
             <h2>About</h2>
             <p>Hello! I am Pradum Kumar & I have done my Graduation B.C.A.</p>
@@ -465,7 +475,7 @@ font-size: 20px;
             </summary>
         </section> 
     </main>
-
+</div>
     <footer>
         <div class="footer-content">
             <h3>&copy; Design By Pradum Kumar.</h3>
